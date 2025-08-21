@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Smartlink — Edgy L</title><link rel="stylesheet" href="/assets/css/styles.css">
+<script type="module" src="/assets/js/marketing_config.js"></script><script type="module" src="/assets/js/marketing.js"></script>
+<style>.smart-wrap{min-height:100dvh;display:grid;place-items:center;padding:28px}.smart-card{max-width:520px;width:100%;background:#0f0f0f;border:1px solid #1a1a1a;border-radius:16px;padding:18px}.smart-cover{border-radius:12px;border:1px solid #1a1a1a;display:block;margin:0 auto}.smart-title{text-align:center;margin:12px 0 6px}.smart-sub{color:#bdbdbd;font-size:13px;text-align:center;margin-bottom:14px}.btn.wide{justify-content:center;width:100%}.grid-gap{display:grid;gap:10px}.topbar{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}.smallmuted{font-size:12px;color:#9a9a9a}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#111;border:1px solid #2a2a2a;border-radius:999px;padding:8px 12px;display:none}</style>
+</head><body>
+<div class="smart-wrap"><main class="smart-card">
+  <div class="topbar smallmuted"><span>EDGY L — Smartlink</span>
+    <div class="list-inline"><button class="btn" id="copyLink">Copy Smartlink URL</button>
+      <a class="btn" href="/smartlink/builder.html">Open Builder</a></div></div>
+  <img id="cover" class="smart-cover" src="/media/aoa_cover.jpg" alt="Cover art" width="400" height="400"/>
+  <h2 id="title" class="smart-title">All Over Again</h2>
+  <div id="subtitle" class="smart-sub">Choose your platform</div>
+  <div id="buttons" class="grid-gap"></div>
+  <div style="text-align:center;margin-top:10px"><a href="/" class="small">← Back to Home</a></div>
+</main></div>
+<div class="toast" id="toast">Copied!</div>
+<script type="module" src="/assets/js/smartlink.js"></script>
+<script>document.getElementById('copyLink').addEventListener('click', async ()=>{try{await navigator.clipboard.writeText(location.href);const t=document.getElementById('toast');t.style.display='block';setTimeout(()=>t.style.display='none',1200);}catch(e){alert('Copy failed');}});</script>
+</body></html>
